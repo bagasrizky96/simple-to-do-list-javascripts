@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aplikasi to do list</title>
-    <style type="text/css">
-        .cheked {
-            text-decoration: line-through;
-            font-style: italic;
-            color: #333;
-        }
-    </style>
 </head>
 <body>
     <h1>to do list</h1>
@@ -21,17 +14,22 @@
     <script type="text/javascript">
         var list = document.getElementById("mylist");
         function func_add(){
+            // membuat div untuk list pada todo
+            var dilf = document.createElement("DIV");
+            document.body.appendChild(dilf);
+
+            // mengambil nilai yang ada pada inputan untuk dimasukan pada todo
             var value = document.getElementById("todo").value;
-            var li = document.createElement("LI");
+
+            // membuat child pada div untuk isi dari list todo
+            var tede = document.createElement("TD");
             var textnode = document.createTextNode(value);
-            li.appendChild(textnode);
-            list.appendChild(li);
+            tede.appendChild(textnode);
+            dilf.appendChild(tede);
+            // var li = document.createElement("LI");
+            // li.appendChild(textnode);
+            // list.appendChild(li);
         }
-        list.addEventListener("click",function(ev){
-            if(ev.target.tagName === "LI"){
-                ev.target.classList.toggle("cheked");
-            }
-        }, false);
     </script>
 </body>
 </html>
