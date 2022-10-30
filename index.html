@@ -26,6 +26,19 @@
             var textnode = document.createTextNode(value);
             tede.appendChild(textnode);
             dilf.appendChild(tede);
+
+            // membuat tombol hapus
+            var ttd = document.createElement("TD");
+            var bttn = document.createElement("BUTTON");
+            bttn.setAttribute("id","mybut");
+            var node = document.createTextNode("hapus");
+            bttn.appendChild(node);
+
+            ttd.appendChild(bttn);
+            dilf.appendChild(ttd);
+
+
+
             // var li = document.createElement("LI");
             // li.appendChild(textnode);
             // list.appendChild(li);
